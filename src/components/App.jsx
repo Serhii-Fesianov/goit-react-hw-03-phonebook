@@ -28,7 +28,6 @@ export class App extends Component {
 
   componentDidUpdate(_, prevState) {
     if (prevState.contacts.length !== this.state.contacts.length) {
-      alert('contacts changed');
       window.localStorage.setItem(
         'CONTACTS_DATA',
         JSON.stringify(this.state.contacts)
